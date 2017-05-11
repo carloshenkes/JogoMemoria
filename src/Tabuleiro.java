@@ -26,7 +26,7 @@ public class Tabuleiro extends JPanel {
 		super();
 		//****CONFIGURAÇÕES DO TABULEIRO****		
 		//cria um vetor que irá conter as instâncias de "Carta" 
-		cartas = new Carta[12];	
+		cartas = new Carta[14];	
 		//cria os objetos do tipo carta usando imagens do diretório do jogo e armazena no vetor "cartas"
 		cartas[0] = new Carta(0, new ImageIcon(getClass().getResource("circulo.png")), this);
 		cartas[1] = new Carta(0, new ImageIcon(getClass().getResource("circulo.png")), this);		
@@ -53,7 +53,7 @@ public class Tabuleiro extends JPanel {
 		
 		//****CONFIGURAÇÕES DA PARTE VISUAL****		
 		//configura o painel com o layout "GridLayout"
-		setLayout(new GridLayout(3, 4, 1, 1));
+		setLayout(new GridLayout(3, 4, 2, 2));
 		//adiciona as cartas ao painel (o Tabuleiro em si)
 		for(int i = 0; i < cartas.length; i++){
 			add(cartas[i]);

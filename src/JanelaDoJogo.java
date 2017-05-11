@@ -16,8 +16,8 @@ public class JanelaDoJogo extends JFrame{
 		//configura a janela
 		super("Jogo da Memória");
 		setLayout(new BorderLayout());
-		setSize(420, 365);// resolução da janela
-		setResizable(false);
+		setSize(500, 500);// resolução da janela
+		setResizable(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		tabuleiro = new Tabuleiro();
