@@ -57,7 +57,7 @@ public class JanelaDoJogo extends JFrame{
 					@Override
 					public void actionPerformed(ActionEvent e) {						
 						JOptionPane.showMessageDialog(JanelaDoJogo.this,
-								"Desenvolvido por "
+								"Desenvolvido por Aula"
 								+ "\n"
 								+ " ");
 					}					

@@ -40,6 +40,8 @@ public class Tabuleiro extends JPanel {
 		cartas[9] = new Carta(4, new ImageIcon(getClass().getResource("quadrado.png")), this);		
 		cartas[10] = new Carta(5, new ImageIcon(getClass().getResource("triangulo.png")), this);
 		cartas[11] = new Carta(5, new ImageIcon(getClass().getResource("triangulo.png")), this);
+                cartas[12] = new Carta(6, new ImageIcon(getClass().getResource("triangulo.png")), this);
+                cartas[13] = new Carta(6, new ImageIcon(getClass().getResource("triangulo.png")), this);
     
 		//embaralha o vetor de cartas
 		ShuffleAlgorithm.shuffle(cartas);
