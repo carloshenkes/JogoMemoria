@@ -16,7 +16,7 @@ public class JanelaDoJogo extends JFrame{
 		//configura a janela
 		super("Jogo da Memória");
 		setLayout(new BorderLayout());
-		setSize(420, 365);
+		setSize(420, 365);// resolução da janela
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -57,9 +57,9 @@ public class JanelaDoJogo extends JFrame{
 					@Override
 					public void actionPerformed(ActionEvent e) {						
 						JOptionPane.showMessageDialog(JanelaDoJogo.this,
-								"Desenvolvido por Henrirque Felipe."
-								+ "\nJaneiro de 2015"
-								+ "\nAcesse: http://inimushawa.blogspot.com/");
+								"Desenvolvido por "
+								+ "\n"
+								+ " ");
 					}					
 				}
 		);
