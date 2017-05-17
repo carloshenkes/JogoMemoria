@@ -18,7 +18,9 @@ public class Tabuleiro extends JPanel {
 	//conta quantas vezes o jogador errou um par
 	private int erros;
 	//conta quantos pares foram formados. Exerce papel auxiliar
-	private int paresFormados;	
+	private int paresFormados;
+        //total de cartas no jogo
+        int cartasJogo;
 	//quando 'true' impede que as sejam viradas ("bloqueia" o método acao)
 	private boolean lock;
 	
@@ -26,7 +28,8 @@ public class Tabuleiro extends JPanel {
 		super();
 		//****CONFIGURAÇÕES DO TABULEIRO****		
 		//cria um vetor que irá conter as instâncias de "Carta" 
-		cartas = new Carta[14];	
+		cartas = new Carta[16];
+                cartasJogo=(cartas.length/2);
 		//cria os objetos do tipo carta usando imagens do diretório do jogo e armazena no vetor "cartas"
 		cartas[0] = new Carta(0, new ImageIcon(getClass().getResource("circulo.png")), this);
 		cartas[1] = new Carta(0, new ImageIcon(getClass().getResource("circulo.png")), this);		
@@ -40,8 +43,10 @@ public class Tabuleiro extends JPanel {
 		cartas[9] = new Carta(4, new ImageIcon(getClass().getResource("quadrado.png")), this);		
 		cartas[10] = new Carta(5, new ImageIcon(getClass().getResource("triangulo.png")), this);
 		cartas[11] = new Carta(5, new ImageIcon(getClass().getResource("triangulo.png")), this);
-                cartas[12] = new Carta(6, new ImageIcon(getClass().getResource("triangulo.png")), this);
-                cartas[13] = new Carta(6, new ImageIcon(getClass().getResource("triangulo.png")), this);
+                cartas[12] = new Carta(6, new ImageIcon(getClass().getResource("maça.png")), this);
+                cartas[13] = new Carta(6, new ImageIcon(getClass().getResource("maça.png")), this);
+                cartas[14] = new Carta(6, new ImageIcon(getClass().getResource("abacaxi.png")), this);
+                cartas[15] = new Carta(6, new ImageIcon(getClass().getResource("abacaxi.png")), this);
     
 		//embaralha o vetor de cartas
 		ShuffleAlgorithm.shuffle(cartas);
@@ -137,8 +142,8 @@ public class Tabuleiro extends JPanel {
 					carta.mudarPosicao();	
 					//incrementa "paresFormados"
 					paresFormados++;
-					//Se "paresFormados" for igual a 6, então todos os pares ja foram formados... 
-					if(paresFormados == 6){//inicio do if
+					//Se "paresFormados" for igual a cartasJogo, então todos os pares ja foram formados... 
+					if(paresFormados == cartasJogo){//inicio do if
 						//fim do jogo, exibe mensagem com os erros
 						JOptionPane.showMessageDialog(this,
 								"O jogo acabou! Quantidade de erros: " + erros,
