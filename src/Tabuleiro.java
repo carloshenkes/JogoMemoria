@@ -28,7 +28,7 @@ public class Tabuleiro extends JPanel {
 		super();
 		//****CONFIGURAÇÕES DO TABULEIRO****		
 		//cria um vetor que irá conter as instâncias de "Carta" 
-		cartas = new Carta[16];
+		cartas = new Carta[18];
                 cartasJogo=(cartas.length/2);
 		//cria os objetos do tipo carta usando imagens do diretório do jogo e armazena no vetor "cartas"
 		cartas[0] = new Carta(0, new ImageIcon(getClass().getResource("circulo.png")), this);
@@ -45,8 +45,11 @@ public class Tabuleiro extends JPanel {
 		cartas[11] = new Carta(5, new ImageIcon(getClass().getResource("triangulo.png")), this);
                 cartas[12] = new Carta(6, new ImageIcon(getClass().getResource("maça.png")), this);
                 cartas[13] = new Carta(6, new ImageIcon(getClass().getResource("maça.png")), this);
-                cartas[14] = new Carta(6, new ImageIcon(getClass().getResource("abacaxi.png")), this);
-                cartas[15] = new Carta(6, new ImageIcon(getClass().getResource("abacaxi.png")), this);
+                cartas[14] = new Carta(7, new ImageIcon(getClass().getResource("abacaxi.png")), this);
+                cartas[15] = new Carta(7, new ImageIcon(getClass().getResource("abacaxi.png")), this);
+                cartas[16] = new Carta(8, new ImageIcon(getClass().getResource("bergamota.png")), this);
+                cartas[17] = new Carta(8, new ImageIcon(getClass().getResource("bergamota.png")), this);
+                
     
 		//embaralha o vetor de cartas
 		ShuffleAlgorithm.shuffle(cartas);
@@ -62,7 +65,9 @@ public class Tabuleiro extends JPanel {
 		//adiciona as cartas ao painel (o Tabuleiro em si)
 		for(int i = 0; i < cartas.length; i++){
 			add(cartas[i]);
-		}		
+		}	
+                
+               
 	}
 	/*
 	 * O método "reset" reinicia o jogo.
@@ -91,6 +96,8 @@ public class Tabuleiro extends JPanel {
 		revalidate();
 		repaint();
 	}
+        
+        
 	/*
 	 * O método "acao" controla o jogo em si. Como a única ação do
 	 * jogador é clicar nas cartas para virá-las, então este métdo
@@ -184,4 +191,5 @@ public class Tabuleiro extends JPanel {
 			}//fim do if...else
 		}//fim do if
 	}//fim do método "acao"
+        
 }

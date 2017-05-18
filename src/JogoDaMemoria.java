@@ -4,6 +4,7 @@ import javax.swing.UIManager.LookAndFeelInfo;
 
 //Classe principal do jogo da memória
 public final class JogoDaMemoria {
+    
 	public static void main(String[] args) {
 		//****AJUSTA O LOOK AND FEEL****
 		try{
@@ -28,4 +29,6 @@ public final class JogoDaMemoria {
 		}
 		
 	}
+        
+        
 }

@@ -11,6 +11,13 @@ import javax.swing.SwingUtilities;
  * Além disso, também é um componente de interface gráfica do tipo "JLabel". 
  */
 public class Carta extends JLabel {
+
+    public Icon getImagemFrontalDaCarta() {
+        return imagemFrontalDaCarta;
+    }
+
+   
+        
 	//indica se a carta está virada para cima no tabuleiro (se sim, o valor é true)
 	private boolean viradaParaCima;
 	//imagem/ícone da carta quando virada para cima
@@ -22,6 +29,7 @@ public class Carta extends JLabel {
 	//tabuleiro com todas as cartas do jogo
 	private Tabuleiro tabuleiro;
 	
+        
 	public Carta(int id, Icon imagemFrontalDaCarta, Tabuleiro tabuleiro){
 		super();
 		this.imagemFrontalDaCarta = imagemFrontalDaCarta;
@@ -31,7 +39,8 @@ public class Carta extends JLabel {
 		this.id = id;
 		setIcon(imagemTraseiraDaCarta);
 		addMouseListener(new MouseClique());
-	}	
+	}
+        
 	//retorna 'true' se a carta estiver virada para cima ou, caso contrário, retorna false.
 	public boolean isViradaParaCima() {
 		return viradaParaCima;
@@ -42,7 +51,7 @@ public class Carta extends JLabel {
 	 */	
 	public void mudarPosicao(){
 		if(isViradaParaCima()){
-			viradaParaCima = false;
+			viradaParaCima = true;
 			setIcon(imagemTraseiraDaCarta);
 		}else{
 			viradaParaCima = true;		
@@ -97,4 +106,6 @@ public class Carta extends JLabel {
 			//não precisa implementar
 		}		
 	}
+        
+        
 }
