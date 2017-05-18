@@ -1,5 +1,7 @@
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -57,6 +59,17 @@ public class Carta extends JLabel {
 			viradaParaCima = true;		
 			setIcon(imagemFrontalDaCarta);
 		}		
+	}
+        
+        public void mudarPosicao2(){
+            
+		if(isViradaParaCima()){
+			viradaParaCima = false;
+			setIcon(imagemFrontalDaCarta);
+                        Timer t = new Timer(1000, t1);
+                }	
+                
+                
 	}
 
 	/*
